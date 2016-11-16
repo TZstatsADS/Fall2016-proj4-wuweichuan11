@@ -152,6 +152,6 @@ all_matrix<-bars_start_test_data_word_pro+beats_start_test_data_word_pro+section
             segments_timbre_test_data_word_pro+segments_pitches_test_data_word_pro
 
 #calculate rank
-word_rank<-apply(-all_matrix,1,rank)
+word_rank<-round(apply(-all_matrix,1,rank))
   
 
