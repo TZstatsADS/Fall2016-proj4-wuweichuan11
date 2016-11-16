@@ -25,8 +25,6 @@ load('segments_pitches.RData')
 load('lyr.RData')
 #take out the numbers
 lyr<-lyr[,-c(2,3,6:30)]
-#get the word list
-col_name<-colnames(lyr)
 
 ###load library
 library("flexclust")
@@ -99,6 +97,7 @@ result_list_segments_pitches<-calculate_word_pro_by_cluster(segments_pitches,tes
 
 
 ###save the word probability matrix
+#setwd('C:/Study/Columbia/W4243_Applied_Data_Science/Project4/Fall2016-proj4-wuweichuan11/data')
 save(result_list_bars_start,file='result_list_bars_start.RData')
 save(result_list_beats_start,file='result_list_beats_start.RData')
 save(result_list_sections_start,file='result_list_sections_start.RData')
